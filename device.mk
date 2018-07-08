@@ -57,13 +57,6 @@ PRODUCT_PACKAGES += \
 # LibShim
 PRODUCT_PACKAGES += \
 	libshim \
-    libshim_icu \
-    libshim_camera \
-    libhw_log \
-    libshim_log \
-    libshim_algo \
-    libshim_hwui \
-    libshim_gpsd \
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -117,11 +110,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
     $(LOCAL_PATH)/prebuilts/media_profiles.xml:system/etc/media_profiles.xml
 
-#FM
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/libfm_jni.so:system/lib/libfmjni.so \
-    $(LOCAL_PATH)/prebuilts/libfm_jni64.so:system/lib64/libfmjni.so
-
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
@@ -146,10 +134,6 @@ PRODUCT_PACKAGES += \
 	tinycap \
 	tinymix \
 	tinypcminfo
-
-# FM RADIO
-PRODUCT_PACKAGES += \
-	FMRadio
 
 # GELLO
 PRODUCT_PACKAGES += \

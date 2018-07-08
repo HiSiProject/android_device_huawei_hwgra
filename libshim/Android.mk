@@ -1,5 +1,4 @@
-#
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2015 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,20 +11,17 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
 LOCAL_PATH := $(call my-dir)
 
+
+#We may build that later
+#But for the moment replacing liblog is fine.
 include $(CLEAR_VARS)
-
-LOCAL_C_INCLUDES := \
-    frameworks/av/include
-
 LOCAL_SRC_FILES := \
-    CameraParameters.cpp
+    hw_log.c
 
-LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)
-LOCAL_MODULE := libcamera_parameters_ext
+LOCAL_MODULE := libhw_log
 LOCAL_MODULE_TAGS := optional
 
-include $(BUILD_STATIC_LIBRARY)
+include $(BUILD_SHARED_LIBRARY)
