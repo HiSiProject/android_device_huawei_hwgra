@@ -116,8 +116,7 @@ PRODUCT_COPY_FILES += \
 
 # HARDWARE
 PRODUCT_PACKAGES += \
-	lights.hi3635 \
-	power.hi3635 
+	lights.hi3635 
 
 # AUDIO
 PRODUCT_PACKAGES += \
