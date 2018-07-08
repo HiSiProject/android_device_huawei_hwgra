@@ -16,7 +16,7 @@
 LOCAL_PATH := device/huawei/hwgra
 
 #USE JAVA 8
-EXPERIMENTAL_USE_JAVA8 := true
+#EXPERIMENTAL_USE_JAVA8 := true
 
 # OTA ASSERT
 TARGET_OTA_ASSERT_DEVICE := hi3635,GRA-L09,hwgra,HWGRA,gra_l09,huawei_p8,ascend_p8,P8,grace,GRACE
