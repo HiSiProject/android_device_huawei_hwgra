@@ -37,4 +37,3 @@ allow hwcamcfgsvr system_server:binder { call transfer };
 allow hwcamcfgsvr property_socket:sock_file { rw_file_perms };
 allow hwcamcfgsvr init:unix_stream_socket { connectto };
 allow hwcamcfgsvr system_server:unix_stream_socket { read write };
-allow hwcamcfgsvr perfhub:binder { call transfer };

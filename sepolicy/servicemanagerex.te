@@ -15,9 +15,6 @@
 # limitations under the License.
 #
 
-allow servicemanager perfhub:dir r_dir_perms;
-allow servicemanager perfhub:file r_file_perms;
-allow servicemanager perfhub:process { getattr };
 allow servicemanager hwcamcfgsvr:dir r_dir_perms;
 allow servicemanager hwcamcfgsvr:file r_file_perms;
 allow servicemanager hwcamcfgsvr:process { getattr };
