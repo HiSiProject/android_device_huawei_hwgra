@@ -17,7 +17,7 @@ index cc76ee7..6524d56 100644
  # New service_types are defined in service.te and new mappings
  # from service name to service_type are defined in service_contexts.
 -neverallow domain default_android_service:service_manager add;
-+neverallow { domain -perfhub -hwcamcfgsvr } default_android_service:service_manager add;
++neverallow { domain -hwcamcfgsvr } default_android_service:service_manager add;
  
  # Require that domains explicitly label unknown properties, and do not allow
  # anyone but init to modify unknown properties.
