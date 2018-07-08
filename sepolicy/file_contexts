@@ -136,7 +136,6 @@
 
 # for zygote link file
 /system/bin/app_process         u:object_r:zygote_exec:s0
-/system/bin/perfhub     	u:object_r:perfhub_exec:s0
 
 # oeminfo_nvm
 /sbin/oeminfo_nvm_server	u:object_r:oeminfo_nvm_exec:s0
