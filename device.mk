@@ -51,12 +51,11 @@ PRODUCT_COPY_FILES += \
 
 # CAMERA
 PRODUCT_PACKAGES += \
-	Camera2 \
-	Snap
+	Camera2 
 
 # LibShim
 PRODUCT_PACKAGES += \
-	libshim \
+	libhw_log
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -117,7 +116,6 @@ PRODUCT_COPY_FILES += \
 
 # HARDWARE
 PRODUCT_PACKAGES += \
-	hwcomposer.hi3635 \
 	lights.hi3635 \
 	power.hi3635 
 
@@ -143,10 +141,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	flp.default
 
-# FLIPFLAP
-PRODUCT_PACKAGES += \
-    FlipFlap
-
 # NFC
 PRODUCT_PACKAGES += \
 	com.android.nfc_extras \
@@ -171,10 +165,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
     $(LOCAL_PATH)/prebuilts/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf    
-
-# GPS
-PRODUCT_PACKAGES += \
-    libtinyxml
 
 # RAMDISK
 PRODUCT_PACKAGES += \

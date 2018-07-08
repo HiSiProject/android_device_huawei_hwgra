@@ -1,6 +1,0 @@
-# perfhub daemon
-type perfhub, domain, domain_deprecated;
-type perfhub_exec, exec_type, file_type;
-
-# Started by init
-init_daemon_domain(perfhub)

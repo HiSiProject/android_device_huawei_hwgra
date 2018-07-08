@@ -1,8 +1,0 @@
-# hiscoutmanager daemon
-type hiscoutmanager, domain, domain_deprecated;
-type hiscoutmanager_exec, exec_type, file_type;
-
-# Started by init
-init_daemon_domain(hiscoutmanager)
-
-
