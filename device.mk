@@ -54,18 +54,6 @@ PRODUCT_PACKAGES += \
 	Camera2 \
 	Snap
 
-# LibShim
-PRODUCT_PACKAGES += \
-	libshim \
-    libshim_icu \
-    libshim_other_camera \
-    libhw_log \
-    libshim_log \
-    libshim_algo \
-    libshim_hwui \
-    libshim_gpsd \
-
-
 # GPS
 PRODUCT_PACKAGES += \
 	libgccdemangle

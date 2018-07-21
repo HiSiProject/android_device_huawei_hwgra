@@ -14,20 +14,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-# perfhub
+# gnss
 #
 
-type perfhub, domain;
-type perfhub_exec, exec_type, file_type;
+type gnss, domain;
+type gnss_exec, exec_type, file_type;
+type gnss_device, dev_type, file_type;
+type gnss_data_file, file_type;
 
-init_daemon_domain(perfhub)
+init_daemon_domain(gnss)
 
-allow perfhub servicemanager:binder { call transfer };
-allow perfhub sysfs:file rw_file_perms;
-allow perfhub default_android_service:service_manager { add };
-allow perfhub graphics_device:dir r_dir_perms;
-allow perfhub graphics_device:chr_file rw_file_perms;
-allow perfhub hwcamcfgsvr:binder { call transfer };
-allow perfhub hwcamcfgsvr:fd { use };
-allow perfhub surfaceflinger_service:service_manager { find };
-allow perfhub surfaceflinger:fd { use };
+allow gnss gnss_device:chr_file rw_file_perms;
+allow gnss system_data_file:sock_file rw_file_perms;
+allow gnss gnss_data_file:dir r_dir_perms;
+allow gnss gnss_data_file:file rw_file_perms;

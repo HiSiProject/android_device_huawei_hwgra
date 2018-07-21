@@ -14,20 +14,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-# perfhub
-#
 
-type perfhub, domain;
-type perfhub_exec, exec_type, file_type;
-
-init_daemon_domain(perfhub)
-
-allow perfhub servicemanager:binder { call transfer };
-allow perfhub sysfs:file rw_file_perms;
-allow perfhub default_android_service:service_manager { add };
-allow perfhub graphics_device:dir r_dir_perms;
-allow perfhub graphics_device:chr_file rw_file_perms;
-allow perfhub hwcamcfgsvr:binder { call transfer };
-allow perfhub hwcamcfgsvr:fd { use };
-allow perfhub surfaceflinger_service:service_manager { find };
-allow perfhub surfaceflinger:fd { use };
+allow servicemanager perfhub:dir r_dir_perms;
+allow servicemanager perfhub:file r_file_perms;
+allow servicemanager perfhub:process { getattr };
+allow servicemanager hwcamcfgsvr:dir r_dir_perms;
+allow servicemanager hwcamcfgsvr:file r_file_perms;
+allow servicemanager hwcamcfgsvr:process { getattr };
+allow servicemanager zygote:dir r_dir_perms;
+allow servicemanager zygote:file r_file_perms;

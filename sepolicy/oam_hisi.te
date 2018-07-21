@@ -14,20 +14,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-# perfhub
+# oam_hisi
 #
 
-type perfhub, domain;
-type perfhub_exec, exec_type, file_type;
+type oam_hisi, domain;
+type oam_hisi_exec, exec_type, file_type;
+type oam_hisi_device, dev_type,file_type;
 
-init_daemon_domain(perfhub)
+init_daemon_domain(oam_hisi)
 
-allow perfhub servicemanager:binder { call transfer };
-allow perfhub sysfs:file rw_file_perms;
-allow perfhub default_android_service:service_manager { add };
-allow perfhub graphics_device:dir r_dir_perms;
-allow perfhub graphics_device:chr_file rw_file_perms;
-allow perfhub hwcamcfgsvr:binder { call transfer };
-allow perfhub hwcamcfgsvr:fd { use };
-allow perfhub surfaceflinger_service:service_manager { find };
-allow perfhub surfaceflinger:fd { use };
+allow oam_hisi system_data_file:dir { setattr };
+allow oam_hisi oam_hisi:netlink_socket create_socket_perms;
+allow oam_hisi hisi_log:file r_file_perms;
+allow oam_hisi oam_hisi_device:chr_file rw_file_perms;

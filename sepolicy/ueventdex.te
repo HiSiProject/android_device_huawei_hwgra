@@ -13,21 +13,5 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
-# perfhub
-#
 
-type perfhub, domain;
-type perfhub_exec, exec_type, file_type;
-
-init_daemon_domain(perfhub)
-
-allow perfhub servicemanager:binder { call transfer };
-allow perfhub sysfs:file rw_file_perms;
-allow perfhub default_android_service:service_manager { add };
-allow perfhub graphics_device:dir r_dir_perms;
-allow perfhub graphics_device:chr_file rw_file_perms;
-allow perfhub hwcamcfgsvr:binder { call transfer };
-allow perfhub hwcamcfgsvr:fd { use };
-allow perfhub surfaceflinger_service:service_manager { find };
-allow perfhub surfaceflinger:fd { use };
+allow ueventd oeminfo_nvm_device:chr_file create_file_perms;

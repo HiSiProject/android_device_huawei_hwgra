@@ -14,20 +14,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-# perfhub
+# chr_logd
 #
 
-type perfhub, domain;
-type perfhub_exec, exec_type, file_type;
+type chr_logd, domain;
+type chr_logd_exec, exec_type, file_type;
 
-init_daemon_domain(perfhub)
+init_daemon_domain(chr_logd)
 
-allow perfhub servicemanager:binder { call transfer };
-allow perfhub sysfs:file rw_file_perms;
-allow perfhub default_android_service:service_manager { add };
-allow perfhub graphics_device:dir r_dir_perms;
-allow perfhub graphics_device:chr_file rw_file_perms;
-allow perfhub hwcamcfgsvr:binder { call transfer };
-allow perfhub hwcamcfgsvr:fd { use };
-allow perfhub surfaceflinger_service:service_manager { find };
-allow perfhub surfaceflinger:fd { use };
+allow chr_logd log_device:chr_file rw_file_perms;
+allow chr_logd hisi_log:file rw_file_perms;
+allow chr_logd hisi_log:sock_file { unlink create setattr };
+allow chr_logd hisi_log:dir rw_dir_perms;

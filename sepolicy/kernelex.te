@@ -14,20 +14,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-# perfhub
-#
 
-type perfhub, domain;
-type perfhub_exec, exec_type, file_type;
-
-init_daemon_domain(perfhub)
-
-allow perfhub servicemanager:binder { call transfer };
-allow perfhub sysfs:file rw_file_perms;
-allow perfhub default_android_service:service_manager { add };
-allow perfhub graphics_device:dir r_dir_perms;
-allow perfhub graphics_device:chr_file rw_file_perms;
-allow perfhub hwcamcfgsvr:binder { call transfer };
-allow perfhub hwcamcfgsvr:fd { use };
-allow perfhub surfaceflinger_service:service_manager { find };
-allow perfhub surfaceflinger:fd { use };
+allow kernel device:dir { read write add_name create setattr getattr };
+allow kernel device:blk_file create_file_perms;
+allow kernel self:capability mknod;
+allow kernel self:capability dac_override;
+allow kernel unlabeled:file rw_file_perms;
+allow kernel unlabeled:chr_file rw_file_perms;
+allow kernel unlabeled:dir rw_dir_perms;
+allow kernel log_device:chr_file rw_file_perms;
+allow kernel device:chr_file { create setattr };
+allow kernel modem_log_file:dir rw_dir_perms;
+allow kernel modem_log_file:file create_file_perms;
+allow kernel sysfs_devices_system_cpu:file rw_file_perms;
