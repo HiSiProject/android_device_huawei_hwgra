@@ -206,8 +206,8 @@ TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/fstab.hi3635
 # DON'T BUILD TWRP
-RECOVERY_VARIANT := twrp
--include $(LOCAL_PATH)twrp.mk
+#RECOVERY_VARIANT := twrp
+#-include $(LOCAL_PATH)twrp.mk
 
 # FM RADIO
 BOARD_HAVE_FM_RADIO := true
